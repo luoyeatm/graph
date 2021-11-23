@@ -16,6 +16,16 @@ const Home = {
     {
       path: "/home",
       name: "Home",
+      // component: () => import("@/views/graph/AntGraph.vue"),
+      component: () => import("@/views/graph/components/show/CfdShow.vue"),
+      meta: {
+        title: "首页",
+        requireAuth: true,
+      }
+    },
+    {
+      path: "/dev",
+      name: "dev",
       component: () => import("@/views/graph/AntGraph.vue"),
       meta: {
         title: "首页",

@@ -9,7 +9,7 @@
       placement="right"
     >
       <a-form :label-col="{ span: 8 }" :wrapper-col="{ span: 16 }">
-        <div v-for="(item, index) in nodeForm">
+        <div v-for="(item, index) in nodeForm" :key="index">
           <a-form-item
             v-if="item.type === 'text'"
             v-bind="validateInfos[item.name]"
@@ -42,7 +42,11 @@
             v-bind="validateInfos[item.name]"
             :label="item.label"
           >
-            <algorithm @change="change(index)" v-model="form[item.name]" />
+            <algorithm
+              @change="change(index)"
+              v-model="form[item.name]"
+              :algorithmForm="item.algorithm.form"
+            />
           </a-form-item>
           <a-form-item
             :label-col="{ span: 0 }"
@@ -58,6 +62,9 @@
             />
           </a-form-item>
         </div>
+        <a-form-item label="操作">
+          <a-button @click="deleteNode">删除</a-button>
+        </a-form-item>
       </a-form>
     </a-drawer>
   </div>
@@ -68,7 +75,7 @@ import { reactive, ref, watch, computed, onUpdated } from "vue";
 import { useForm } from "@ant-design-vue/use";
 import { NodeFormItem, NodeType } from "@/typings/graph";
 import type { UnwrapRef } from "vue";
-import { Node } from "@antv/x6";
+import { Graph, Node } from "@antv/x6";
 import Algorithm from "./Algorithm.vue";
 import Picker from "@/components/color/Picker.vue";
 import PickerItem from "@/components/color/PickerItem.vue";
@@ -79,6 +86,7 @@ export default {
     //模版组件弹窗外置触发开关
     visible: Boolean,
     nodeForm: Array,
+    graph: Graph,
     currentNode: Node,
     type: String,
     nodeData: Object,
@@ -86,6 +94,7 @@ export default {
   emits: {
     "update:visible": null,
     "update:nodeData": null,
+    delete: null,
   },
   setup(props, context) {
     let nodeDataSave = props.nodeData as NodeType;
@@ -100,12 +109,14 @@ export default {
       nodeForm?.map((item, index) => {
         let value: any = "";
 
-        if (item.prop) {
-          value = props.currentNode[item.prop];
-        } else if (item.func) {
-          if (item.func === "zIndex") {
-            value = props.currentNode?.zIndex;
-          }
+        if (item.func) {
+          value = item.func(currentNode);
+        } else if (item.dom) {
+          const view = props.graph.findView(props.currentNode);
+          const contentElem = view.findOne(
+            "foreignObject > body > div>div"
+          ) as HTMLElement;
+          value = item.dom(contentElem);
         } else if (item.attr) {
           value = currentNode.getAttrByPath(item.attr);
           if (item.type === "color") {
@@ -163,19 +174,26 @@ export default {
       if (item.save) {
         nodeDataSave[item.save] = form[item.name];
       }
-      if (item.attr) {
+      if (item.func) {
+        item.func(props.currentNode, form[item.name]);
+      } else if (item.attr) {
         props.currentNode?.setAttrByPath(item.attr, form[item.name]);
-      }
-      if (item.prop) {
-        // if (item.prop === "zIndex") {
-        props.currentNode[item.prop] = form[item.name];
-        // }
+      } else if (item.dom) {
+        const view = props.graph.findView(props.currentNode);
+        const contentElem = view.findOne(
+          "foreignObject > body > div>div"
+        ) as HTMLElement;
+        item.dom(contentElem, form[item.name]);
       }
     };
     //弹窗关闭
     const onClose = () => {
       context.emit("update:visible", false);
       context.emit("update:nodeData", nodeDataSave);
+    };
+
+    const deleteNode = () => {
+      context.emit("delete");
     };
     return {
       form,
@@ -185,6 +203,7 @@ export default {
       change,
       afterVisibleChange,
       onClose,
+      deleteNode,
     };
   },
 };

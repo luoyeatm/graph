@@ -4,7 +4,7 @@
     v-model:collapsed="collapsed"
     collapsible
   >
-    <div class="logo" />
+  <div  class="logo" ><img  class="logo" src= "/logo.png" />曹妃甸陆地生产监控</div>
     <a-menu
       theme="dark"
       v-model:selectedKeys="selectedKeys"
@@ -17,6 +17,12 @@
         </router-link>
       </a-menu-item>
       <a-menu-item key="2">
+        <router-link to="/dev">
+        <pie-chart-outlined />
+        <span>dev</span>
+        </router-link>
+      </a-menu-item>
+      <a-menu-item key="3">
         <router-link to="/graphList">
         <pie-chart-outlined />
         <span>列表</span>
@@ -74,18 +80,22 @@ export default {
   },
   setup() {
     const collapsed = ref<boolean>(false)
-    const selectedKeys = ref<string[]>(["2"])
+    const selectedKeys = ref<string[]>(["1"])
     return {
       collapsed,
-      selectedKeys
+      selectedKeys,
     };
   },
 };
 </script>
 <style lang='less' scoped>
 .logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 50px;
+  margin-top: 4px;
+  padding: 0px;
+  color: rgba(255, 255, 255, 1.0);
+  font-size: 15px
+  // background: rgba(255, 255, 255, 0.3);
+  // background-image: "url('/logo.png')"; 
 }
 </style>

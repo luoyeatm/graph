@@ -1,0 +1,2 @@
+°²×°vite
+cnpm install -g create-vite-app

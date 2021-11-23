@@ -2,33 +2,11 @@
   <div>
     <a-button @click="fullScreen">全屏</a-button>
     <a-button @click="run">运行</a-button>
-    <a-button @click="dev">开发模式</a-button>
-    <!-- <a-button @click="create">连续创建20个html标准件</a-button> -->
-    <input :v-model="index" />
-
-    <!-- 模版组件 -->
-    <ant-stencil
-      v-if="initFinsh && isDev"
-      :graph="graph.ant"
-      :visibleDrawer="stencil"
-    />
+    <a-button @click="stop">停止</a-button>
 
     <!-- 节点编辑组件-->
-    <ant-node
-      v-if="initFinsh && isDev"
-      :graph="graph.ant"
-      :init="initFinsh"
-      :graphDesc="graph.data"
-    />
     <div id="refScreen">
-      
-        <div
-          className="graph"
-          id="myGraph"
-          ref="refContainer"
-          @dblclickwo="toCenter"
-        ></div>
- 
+      <div className="graph" id="myGraph" ref="refContainer"></div>
     </div>
   </div>
 </template>
@@ -41,19 +19,14 @@ import {
   onMounted,
   reactive,
   ref,
-  computed,
   onBeforeUnmount,
 } from "vue";
-import AntNode from "./components/node/AntNode.vue";
 import { GraphType, NodeFormItem, NodeType } from "@/typings/graph";
-import AntStencil from "./components/stencil/AntStencil.vue";
 import { useStore } from "vuex";
 import { key } from "@/store";
-import { attrEnum, nodeTemplateMap } from "./components/stencil/template";
-import { Item } from "ant-design-vue/lib/menu";
+import { attrEnum, nodeTemplateMap } from "../stencil/template";
 
 export default {
-  components: { AntNode, AntStencil },
   setup(props, context) {
     const store = useStore(key);
     const graph: { ant: Graph; data: GraphType } = reactive({
@@ -66,28 +39,14 @@ export default {
     const initFinsh = ref(false);
     const refContainer = ref(null);
     const refScreen = ref(null);
-    const stencil = ref(false);
+
     const { proxy } = getCurrentInstance();
     const api = proxy.$api;
-    const offsetX = ref(0);
-    const offsetY = ref(0);
-    const scaleX = ref(0);
-    const scaleY = ref(0);
-    const lateX = ref(0);
-    const lateY = ref(0);
-    const winX = ref(0);
-    const winY = ref(0);
-    const graphX = ref(0);
-    const graphY = ref(0);
 
-    function showDrawer() {
-      stencil.value = true;
-    }
     const initGraph = () => {
       if (initFinsh.value) {
         return;
       }
-      console.log("执行了");
       graph.ant = new Graph({
         container: refContainer.value,
         width: parseInt(graph.data.width),
@@ -321,43 +280,33 @@ export default {
     const fullScreen = () => {
       let mySrceen = document.getElementById("refScreen");
       let graphDiv = document.getElementById("myGraph");
-      console.log(mySrceen);
-      console.log(graphDiv);
       mySrceen.requestFullscreen().then(
-          //    let mySrceen = document.getElementById("refScreen");
         (status) => {
           // 正常打开全屏不需要任何操作
-           graphX.value = Number.parseInt(graph.data.width);
-          graphY.value = Number.parseInt(graph.data.height);
-          winX.value = mySrceen.clientWidth as number;
-          winY.value = mySrceen.clientHeight as number;
-          console.log(winX.value)
-          console.log(winY.value)
+          const graphX = graph.data.width as any;
+          const graphY = graph.data.height as any;
+          const winX = mySrceen.clientWidth as number;
+          const winY = mySrceen.clientHeight as number;
           // window.
-          scaleX.value = winX.value / graphX.value;
-          scaleY.value = winY.value / graphY.value;
+          const scaleX = winX / graphX;
+          const scaleY = winY / graphY;
 
-          lateX.value = (winX.value - graphX.value) / 2;
-          lateY.value = (winY.value - graphY.value) / 2;
+          const lateX = (winX - graphX) / 2;
+          const lateY = (winY - graphY) / 2;
 
           graphDiv.style.width = graphX + "px";
           graphDiv.style.height = graphY + "px";
-          // graphDiv.style.left = "0px";
-          // graphDiv.style.top = "0px";
-        //  mySrceen.style.overflow= "auto"
-          mySrceen.style.width = winX.value + "px"
-          mySrceen.style.height = winY.value + "px"
 
           graphDiv.style.transform =
             "translate(" +
-            lateX.value +
+            lateX +
             "px," +
-            lateY.value +
+            lateY +
             "px) " +
             " scale(" +
-            scaleX.value +
+            scaleX +
             "," +
-            scaleY.value +
+            scaleY +
             ") ";
 
           console.log("正常打开全屏");
@@ -369,60 +318,7 @@ export default {
         }
       );
     };
-    const dev = () => {
-      isDev.value = true;
-      let currentGraph = graph.ant as Graph;
-      // currentGraph.enablePanning(); //开启拖动
-      currentGraph.enableSelection(); //开启点选
-      stop(), load();
-      // currentGraph.enable
-    };
-    const toCenter = (e) => {
-      let graphDiv = document.getElementById("myGraph");
-        let mySrceen = document.getElementById("refScreen");
-      console.log(e);
-      if (offsetX.value === 0 && offsetY.value === 0) {
-        const size = 2;
-          //mySrceen.style.zoom = "200%"
-        offsetX.value = e.x;
-        offsetY.value = e.y;
-        graphDiv.style.transform =
-          "translate(" +
-          (lateX.value + (winX.value/2-offsetX.value )*(size-1))+
-          // 0+
-          "px," +
-          (lateY.value  +(winY.value/2-offsetY.value )*(size-1))+
-          //  0+
-          "px) " +
-          " scale(" +
-          scaleX.value * size +
-          "," +
-          scaleY.value * size +
-          ") ";
-      } else {
-        // //还原
-        offsetX.value = 0;
-        offsetY.value = 0;
-        graphDiv.style.transform =
-          "translate(" +
-          lateX.value +
-          "px," +
-          lateY.value +
-          "px) " +
-          " scale(" +
-          scaleX.value +
-          "," +
-          scaleY.value +
-          ") ";
-      }
-    };
-    const undev = () => {
-      isDev.value = false;
-      let currentGraph = graph.ant as Graph;
-      currentGraph.disablePanning(); //关闭拖动
-      currentGraph.disableSelection(); //关闭点选
-      // currentGraph.
-    };
+
     const stop = () => {
       clearInterval(timer);
     };
@@ -441,25 +337,12 @@ export default {
             if (contentElem.childElementCount === 0) {
               contentElem.append(getWrap(""));
             }
-            node.setAttrByPath(attrEnum.fontSize, "5");
-            // if(node.id==="8a63f4a5-8225-43dd-a0e6-3abd7a493921"){
-            //   node.setAttrByPath(attrEnum.fontSize,"40")
-            //   node.setAttrByPath(attrEnum.color,"ffffff")
-            // }
-            // node.setAttrByPath(attrEnum.fontSize, "10");
-            // const position = node.getPosition();
-            // if (position.x < 200) {
-            //   position.x += 800;
-            //   position.y += 450;
-            // }
-            // position.x += 2;
-            // position.y += 6;
-
-            // node.setPosition(position);
-            // node.setSize({ width: 10, height: 10 });
-            //   node.data.message === "警告"
-            //     ? node.setAttrByPath(attrEnum.color, "#ff0000")
-            //     : node.setAttrByPath(attrEnum.color, "#00ff00");
+            node.setAttrByPath(attrEnum.fontSize, "10");
+            const position = node.getPosition();
+            node.setSize({ width: 10, height: 10 });
+            node.data.message === "警告"
+              ? node.setAttrByPath(attrEnum.color, "#ff0000")
+              : node.setAttrByPath(attrEnum.color, "#00ff00");
           }
         });
       });
@@ -469,50 +352,29 @@ export default {
       wrap.style.width = "100%";
       wrap.style.height = "100%";
       // wrap.style.backgroundColor = "#ffffff33";
-      wrap.style.display = "flex";
-      wrap.style.alignItems = "center";
-      wrap.style.justifyContent = "center";
+      // wrap.style.display = "flex";
+      // wrap.style.alignItems = "center";
+      // wrap.style.justifyContent = "center";
       wrap.style.borderRadius = "100%";
-      // wrap.style.fontSize = "0.2em";
       wrap.innerText = i;
       return wrap;
     };
 
     const run = () => {
-      undev();
       if (!isRun.value) {
         timer = setInterval(() => {
           api.graph.node.lists(graph.data).then((nodes: any) => {
             nodes.map((node: NodeType) => {
               let currentNode = (graph.ant as Graph).getCellById(node.nodeId);
-              currentNode.setAttrByPath(attrEnum.lable, "");
 
               if (currentNode) {
                 if (currentNode.data.message === "模拟量") {
-                  currentNode.setAttrByPath(
-                    attrEnum.lable,
-                    node.pre + ":" + node.data + node.after
-                  );
-                  currentNode.setAttrByPath(attrEnum.fontSize, "5");
-                  // if (currentNode.shape === "html") {
-                  //   const view = graph.ant.findView(currentNode);
-                  //   const contentElem = view.findOne(
-                  //     "foreignObject > body > div>div"
-                  //   ) as HTMLElement;
-                  //   contentElem.innerText = node.data;
-                  //   contentElem.style.fontSize = "8px";
-                  //   contentElem.style.color = "#00ff00";
-                  // }
-                } else if (currentNode.data.message === "开关量") {
-                  currentNode.setAttrByPath(attrEnum.lable, node.pre);
-                  currentNode.setAttrByPath(attrEnum.color, "#000000");
+                  currentNode.setAttrByPath(attrEnum.lable, node.data);
+                }else {
+                  currentNode.setAttrByPath(attrEnum.lable, "");
                 }
-                // else if (currentNode.data.message === "警告") {
-                //   currentNode.setAttrByPath(attrEnum.lable, node.pre);
-                //   currentNode.setAttrByPath(attrEnum.color, "#000000");
-                // }
+                
 
-                // currentNode.setAttrByPath(attrEnum.lable, node.data);
                 //算法组件
                 if (node.active) {
                   let type = currentNode.data.type;
@@ -536,7 +398,7 @@ export default {
               }
             });
           });
-        }, 3000);
+        }, 2000);
       }
     };
     onBeforeUnmount(() => {
@@ -552,17 +414,12 @@ export default {
     return {
       graph,
       initFinsh,
-      stencil,
-      showDrawer,
       refContainer,
       refScreen,
       fullScreen,
       run,
-      isDev,
-      dev,
-      // create,
       index,
-      toCenter,
+      stop,
     };
   },
 };
@@ -573,13 +430,5 @@ export default {
   height: 80px;
   width: 120px;
   background: #ffffff;
-  margin: 0;
-  padding: 0;
-}
-#refScreen{
-  width: 1920px;
-  height: 1080px;
-  margin: 0;
-  padding: 0;
 }
 </style>

@@ -3,8 +3,10 @@ import vue from '@vitejs/plugin-vue';
 import styleImport from 'vite-plugin-style-import';
 import path from "path";
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:"/cfd",
   resolve: {
     // 配置目录别名
     alias: {
@@ -17,18 +19,20 @@ export default defineConfig({
     }
   },
   server: {
+    
     host: "127.0.0.1",
     port: 9800,
     open: true,//自动打开浏览器
     proxy: {
       '/api': {
-        target: "http://localhost:8989/",
+        target: "http://10.168.1.204:8989/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   },
   plugins: [
+   
     vue(),
     styleImport({
       libs: [{

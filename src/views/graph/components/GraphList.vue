@@ -106,9 +106,9 @@ export default {
 
     return {
       table,
-      create,
       currentGraph,
       visible,
+      create,
       showForm,
       closeForm,
       selectedGraph,
