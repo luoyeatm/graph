@@ -6,7 +6,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:"/cfd",
+  base: "/cfd",
   resolve: {
     // 配置目录别名
     alias: {
@@ -19,7 +19,7 @@ export default defineConfig({
     }
   },
   server: {
-    
+
     host: "127.0.0.1",
     port: 9800,
     open: true,//自动打开浏览器
@@ -31,15 +31,31 @@ export default defineConfig({
       }
     }
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        // additionalData: `@import "${path.resolve(__dirname, 'src/assets//styles/common.less')}"`
+      }
+    }
+  },
+//   css:{
+//     loaderOptions:{
+//         less:{
+//             javascriptEnabled:true,//允许链式调用的换行
+//         }
+//    }
+// }
   plugins: [
-   
+
     vue(),
+    
     styleImport({
       libs: [{
         libraryName: 'ant-design-vue',
-        esModule: true,
+        // esModule: true,
         resolveStyle: (name) => {
-          return `ant-design-vue/es/${name}/style/css`;
+          return `ant-design-vue/es/${name}/style/`;
         },
       }]
     })

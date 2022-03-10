@@ -1,6 +1,6 @@
 import type { App } from "vue"
 
-import { Layout, Menu, Breadcrumb, Form, Result, Button, Input, Checkbox, message, Drawer, Slider, Row, Col ,Table,Modal,Popconfirm} from 'ant-design-vue';
+import { Layout, Menu, Breadcrumb, Form, Result, Button, Input, Checkbox, message, Drawer, Slider, Row, Col ,Table,Modal,Popconfirm,List,Card} from 'ant-design-vue';
 
 const antdComponents = [
   Layout,
@@ -17,7 +17,9 @@ const antdComponents = [
   Col,
   Table,
   Modal,
-  Popconfirm
+  Popconfirm,
+  List,
+  Card
 ]
 
 // 应用组件

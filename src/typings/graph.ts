@@ -10,6 +10,7 @@ export type NodeType = {
     pre?: string
     after?: string
     type?: string
+    max?:string
   }
   
   export type GraphType = {
@@ -22,11 +23,13 @@ export type NodeType = {
   export type NodeFormItem = {
     name: string
     label: string
-    type: string
+    type: string  //表单加载类型
     attr?: string
-    save?: string
-    marks?: object
-    defult?:any
+    save?: string //数据库存储字段名
+    marks?: object  
+    defult?: any  //默认值
+    data?: any  //采用json存储
+    init?: boolean  
     algorithm?: Algorithm
     dom?: (elem:HTMLElement,value?:any)=> any // value 存在 则setValue 否则 return getValue
     func?: (node?:Node,value?:any)=>any  // value 存在 则setValue 否则 return getValue

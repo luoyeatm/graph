@@ -5,7 +5,7 @@ export default {
   state: {
     token: 'tests',
     color: '',
-    graph: { graphId: "1459081709752926209", height: "1080", width: "1920" }
+    graph: { graphId: "1498119644303761410", height: "1080", width: "1920" }
   },
   mutations: {
     //存储token

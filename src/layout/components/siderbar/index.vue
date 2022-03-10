@@ -1,33 +1,35 @@
 <!--  -->
 <template>
-  <a-layout-sider
-    v-model:collapsed="collapsed"
-    collapsible
-  >
-  <div  class="logo" ><img  class="logo" src= "/logo.png" />曹妃甸陆地生产监控</div>
-    <a-menu
-      theme="dark"
-      v-model:selectedKeys="selectedKeys"
-      mode="inline"
-    >
+  <a-layout-sider v-model:collapsed="collapsed" collapsible>
+    <div class="logo">
+      <img class="logo" src="/logo.png" />曹妃甸陆地生产监控
+    </div>
+    <a-menu theme="dark" v-model:selectedKeys="selectedKeys" mode="inline">
       <a-menu-item key="1">
         <router-link to="/home">
-        <pie-chart-outlined />
-        <span>主图</span>
+          <pie-chart-outlined />
+          <span>主图</span>
         </router-link>
       </a-menu-item>
       <a-menu-item key="2">
         <router-link to="/dev">
-        <pie-chart-outlined />
-        <span>dev</span>
+          <pie-chart-outlined />
+          <span>dev</span>
         </router-link>
       </a-menu-item>
+
       <a-menu-item key="3">
         <router-link to="/graphList">
-        <pie-chart-outlined />
-        <span>列表</span>
+          <pie-chart-outlined />
+          <span>列表</span>
         </router-link>
       </a-menu-item>
+      <!-- <a-menu-item key="4">
+        <router-link to="/detail">
+          <pie-chart-outlined />
+          <span>2级页面</span>
+        </router-link>
+      </a-menu-item> -->
       <!-- <a-menu-item key="2">
         <desktop-outlined />
         <span>Option 2</span>
@@ -61,7 +63,7 @@
   </a-layout-sider>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import {
   PieChartOutlined,
   DesktopOutlined,
@@ -71,7 +73,7 @@ import {
 } from "@ant-design/icons-vue";
 import { ref } from "vue";
 export default {
-   components: {
+  components: {
     PieChartOutlined,
     DesktopOutlined,
     UserOutlined,
@@ -79,8 +81,8 @@ export default {
     FileOutlined,
   },
   setup() {
-    const collapsed = ref<boolean>(false)
-    const selectedKeys = ref<string[]>(["1"])
+    const collapsed = ref<boolean>(false);
+    const selectedKeys = ref<string[]>(["1"]);
     return {
       collapsed,
       selectedKeys,
@@ -88,7 +90,7 @@ export default {
   },
 };
 </script>
-<style lang='less' scoped>
+<style lang="less" scoped>
 .logo {
   height: 50px;
   margin-top: 4px;
@@ -96,6 +98,6 @@ export default {
   color: rgba(255, 255, 255, 1.0);
   font-size: 15px
   // background: rgba(255, 255, 255, 0.3);
-  // background-image: "url('/logo.png')"; 
+  // background-image: "url('/logo.png')";
 }
 </style>

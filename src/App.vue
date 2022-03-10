@@ -3,14 +3,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-  name: "App",
-});
+
+import * as echarts from 'echarts'
+import { defineComponent, provide } from "vue";
+export default {
+  name: 'App',
+  setup(){
+    provide('ec',echarts)//provide
+  },
+  components: {
+  }
+}
+
 </script>
 
 <style lang="less">
-.a{
+.a {
   color: red;
 }
 </style>

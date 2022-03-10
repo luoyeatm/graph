@@ -1,24 +1,25 @@
 <template>
-  <div>
-    <a-button type="primary" @click="showDrawer"> Open </a-button>
-    <a-drawer
+  <!-- <div> -->
+  <!-- <a-button type="primary" @click="showDrawer"> Open </a-button> -->
+  <!-- <a-drawer
       :closable="false"
       :visible="visible"
       :after-visible-change="afterVisibleChange"
       @close="onClose"
       title="节点属性"
       placement="right"
-    >
-      <div className="app-stencil" id="stencil" ref="refStencil" />
-    </a-drawer>
-  </div>
+    > -->
+  <div className="app-stencil" id="stencil" ref="refStencil" />
+  <!-- </a-drawer> -->
+  <!-- </div> -->
 </template>
 <script lang="ts">
 /** vue 2.0 语法  有时间再改*/
-
-import { Graph,Dom, Addon } from "@antv/x6";
+import nodeTemplate from "@/template/nodeModel";
+import { Graph, Addon } from "@antv/x6";
+import view from "@/template/viewModel";
+// import { attrEnum } from './template';
 const { Stencil } = Addon;
-import { NodeFormItem } from "@/typings/graph";
 export default {
   props: {
     //模版组件弹窗外置触发开关
@@ -53,135 +54,115 @@ export default {
     //初始化模版
     init() {
       const graph = this.graph;
-      const m5 = graph!.createNode({
-        label: "opc数值组件",
-        width: 120,
-        height: 60,
-        attrs: {
-          body: {
-            fill: "none",
-            stroke: "none",
-          },
-        },
-        data: {
-          type: "text",
-        },
+      graph.on("node:added", ({ node }) => {
+        if (view[node.data.type]) {
+          setTimeout(() => 
+          {
+            const antView = graph.findView(node);
+            console.log(graph);
+            console.log(antView);
+            const contentElem = antView.findOne(
+              "foreignObject > body > div"
+            ) as HTMLElement;
+            if (contentElem && contentElem.children[0]) {
+              contentElem.children[0].remove();
+            }
+            contentElem.append(view[node.data.type](node));
+            console.log(node);
+          }
+          ,1000);
+        }
       });
-      const m6 = graph!.createNode({
-        shape: "circle",
-        width: 60,
-        height: 60,
-        label: "circle",
-        attrs: {
-          body: {
-            fill: "#efdbff",
-            stroke: "none",
-          },
-        },
-        data: {
-          type: "circle",
-        },
-      });
-      const m7 = graph!.createNode({
-        shape: "html",
-        width: 60,
-        height: 60,
-        // label: "html",
-        html: () => {
-          const wrap = document.createElement("div");
-          wrap.style.width = "100%";
-          wrap.style.height = "100%";
-          wrap.innerText = "模拟量";
-          return wrap;
-        },
-        data:{type:"html",message:"模拟量"}
-      });
-      const m8 = graph!.createNode({
-        shape: "html",
-        width: 60,
-        height: 60,
-        // label: "html",
-        html: () => {
-          const wrap = document.createElement("div");
-          wrap.style.width = "100%";
-          wrap.style.height = "100%";
-          wrap.innerText = "开关量";
-          return wrap;
-        },
-        data:{type:"html",message:"开关量"}
-      });
-      const m9 = graph!.createNode({
-        shape: "html",
-        width: 60,
-        height: 60,
-        // label: "html",
-        html: () => {
-          const wrap = document.createElement("div");
-          wrap.style.width = "100%";
-          wrap.style.height = "100%";
-          wrap.innerText = "警告";
-          return wrap;
-        },
-        data:{type:"html",message:"警告"}
-      });
-
       const stencil = new Stencil({
         title: "Components",
         target: graph,
+
         search(cell, keyword) {
-          return cell.shape.indexOf(keyword) !== -1;
+          return cell.data.label.indexOf(keyword) !== -1;
+        },
+        getDropNode(node) {
+          // const { width, height } = node.size();
+          // 返回一个新的节点作为实际放置到画布上的节点
+          let cloneNode = node.clone();
+
+          if (
+            node.data.type === "waterHight" ||
+            node.data.type === "ref" ||
+            node.data.type === "label" ||
+            node.data.type === "on-off"
+          ) {
+            return cloneNode.size(10, 10);
+          } else {
+            return cloneNode;
+          }
         },
         validateNode(droppingNode, options) {
-          return droppingNode.shape === "html"
+          return droppingNode.data.type === "parent"
             ? new Promise<boolean>((resolve) => {
                 const { draggingNode, draggingGraph } = options;
-                const view = draggingGraph.findView(draggingNode)!;
-                const contentElem = view.findOne("foreignObject > body > div>div");
-                Dom.addClass(contentElem, "validating ");
-                setTimeout(() => {
-                  Dom.removeClass(contentElem, "validating");
-                  resolve(true);
-                }, 3000);
+                // if (
+                //   draggingNode.data.type === "waterHight" ||
+                //   draggingNode.data.type === "label" ||
+                //   draggingNode.data.type === "ref"
+                // ) {
+                //   draggingNode.setSize({ width: 10, height: 10 });
+                //   let postion = draggingNode.getPosition();
+                //   if (draggingNode.data.type === "waterHight") {
+                //   } else {
+                //     postion.x = postion.x + 25;
+                //   }
+                //   postion.y = postion.y + 25;
+                //   draggingNode.setPosition(postion);
+                // }
+
+                //draggingNode.setAttrByPath(attrEnum.label,draggingNode.data.label);
+                resolve(true);
               })
             : true;
         },
+        // validateNode(droppingNode, options) {
+        //   return droppingNode.shape === "html"
+        //     ? new Promise<boolean>((resolve) => {
+        //         const { draggingNode, draggingGraph } = options;
+
+        //       })
+        //     : true;
+        // },
         placeholder: "搜索组件",
         notFoundText: "Not Found",
         collapsable: true,
         stencilGraphWidth: 200,
-        stencilGraphHeight: 180,
-        groups: [
-          {
-            name: "group1",
-            title: "组态标准件",
-          },
-          {
-            name: "group2",
-            title: "组态线",
-            // collapsable: false,
-          },
-        ],
+        stencilGraphHeight: 500,
+        groups: nodeTemplate.map((item) => {
+          return {
+            name: item.name,
+            title: item.title,
+            graphHeight: (item.nodes.length + 1) * 40,
+          };
+        }),
       });
 
       (this.$refs.refStencil as HTMLElement).appendChild(stencil.container);
 
-      stencil.load([m7,m8,m9], "group1");
-      stencil.load([m5, m6], "group2");
+      nodeTemplate.map((group) => {
+        stencil.load(group.nodes, group.name);
+      });
     },
   },
   mounted() {
     this.visible = this.$props.visibleDrawer;
+    console.log(this.$props.graph);
+    this.init();
   },
 };
 </script>
 <style lang="less" scoped>
 .app-stencil {
-  height: 100px;
-  width: 200px;
+  height: 600px;
+  width: 100%;
   border: 1px solid #f0f0f0;
-  position: static;
+  position: relative;
   background-color: aquamarine;
   z-index: 99;
 }
-
 </style>

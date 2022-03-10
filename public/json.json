@@ -1,0 +1,1592 @@
+[
+    {
+        "pre": "温度A",
+        "num": "1",
+        "title": "FPSO-生产水与原油\n换热器E-2310A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2310A.RINP",
+        "url2": "AWZ001/02_P23:TIT_2310A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 2,
+        "title": "FPSO-生产水与原油\n换热器E-2310B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2310B.RINP",
+        "url2": "AWZ001/02_P23:TIT_2310B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度A",
+        "num": 3,
+        "title": "FPSO-原油与干原油换热器E-2320A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2320A.RINP",
+        "url2": "AWZ001/02_P23:TIT_2320A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 4,
+        "title": "FPSO-原油与干原油换热器E-2320B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2320B.RINP",
+        "url2": "AWZ001/02_P23:TIT_2320B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度A",
+        "num": 5,
+        "title": "FPSO-一级分离器入口 加热器E-2330A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2330A.RINP",
+        "url2": "AWZ001/02_P23:TIT_2330A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 6,
+        "title": "FPSO-一级分离器入口 加热器E-2330B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2330B.RINP",
+        "url2": "AWZ001/02_P23:TIT_2330B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度",
+        "num": 7,
+        "title": "FPSO-干原油冷却器E-2400",
+        "type": "模拟量",
+        "url": "AWZ001/02_P24:TIT_2400A.RINP",
+        "url2": "AWZ001/02_P24:TIT_2400A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度",
+        "num": 8,
+        "title": "FPSO-二级分离器入口加热器E-2350",
+        "type": "模拟量",
+        "url": "AWZ001/02_P23:TIT_2350A.RINP",
+        "url2": "AWZ001/02_P23:TIT_2350A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "流量",
+        "num": 9,
+        "title": "FPSO-生产水泵 P-2780A（FIT）",
+        "type": "模拟量",
+        "url": "AWZ001/02_P27:FIT_2780A.RINP",
+        "url2": "AWZ001/02_P27:FIT_2780A.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "A",
+        "num": 10,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2780A",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2780A_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "流量B",
+        "num": 11,
+        "title": "FPSO-生产水泵 P-2780B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P27:FIT_2780B.RINP",
+        "url2": "AWZ001/02_P27:FIT_2780B.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "B",
+        "num": 12,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2780B",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2780B_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "流量C",
+        "num": 13,
+        "title": "FPSO-生产水泵 P-2780C",
+        "type": "模拟量",
+        "url": "AWZ001/02_P27:FIT_2780C.RINP",
+        "url2": "AWZ001/02_P27:FIT_2780C.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "C",
+        "num": 14,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2780C",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2780C_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "温度",
+        "num": 15,
+        "title": "FPSO-电脱入口加热器E-2380",
+        "type": "模拟量",
+        "url": "AWZ001/02_23:TIT_2380A.PNT",
+        "url2": "AWZ001/02_P23:TIT_2380A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "流量",
+        "num": 16,
+        "title": "FPSO-干原油冷却器E-2200",
+        "type": "模拟量",
+        "url": "AWZ001/02_P22:TIT_2200A.RINP",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "温度",
+        "num": 17,
+        "title": "FPSO-电脱入口加热器E-2180",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2180A.RINP",
+        "url2": "AWZ001/02_P21:TIT_2180A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "流量A",
+        "num": 18,
+        "title": "FPSO-生产水泵 P-2680A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:FIT_2680A.RINP",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "A",
+        "num": 19,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2680A",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2680A_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "流量B",
+        "num": 20,
+        "title": "FPSO-生产水泵 P-2680B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:FIT_2680B.RINP",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "B",
+        "num": 21,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2680B",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2680B_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "流量C",
+        "num": 22,
+        "title": "FPSO-生产水泵 P-2680C",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:FIT_2680C.RINP",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "C",
+        "num": 23,
+        "active": "==,1,run",
+        "title": "FPSO-生产水泵 P-2680C",
+        "type": "开关量",
+        "url": "AWZ001/02_DP1:P2680C_OV.BLKSTA",
+        "url2": ""
+    },
+    {
+        "pre": "温度",
+        "num": 24,
+        "title": "FPSO-二级分离器入口加热器E-2150",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2150A.RINP",
+        "url2": "AWZ001/02_P21:TIT_2150A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度A",
+        "num": 25,
+        "title": "FPSO-一级 分离器入口 加热器E-2130A",
+        "type": "模拟量",
+        "url": "AWZ001/14_P21_N:TIT_2130A.PNT",
+        "url2": "AWZ001/02_P21:TIT_2130A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 26,
+        "title": "FPSO-一级 分离器入口 加热器E-2130B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2130B.RINP",
+        "url2": "AWZ001/02_P21:TIT_2130B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度A",
+        "num": 27,
+        "title": "FPSO-原油与干原油换热器E-2120A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2120A.RINP",
+        "url2": "AWZ001/02_P21:TIT_2120A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 28,
+        "title": "FPSO-原油与干原油换热器E-2120B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2120B.RINP",
+        "url2": "AWZ001/02_P21:TIT_2120B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度A",
+        "num": 29,
+        "title": "FPSO-生产水与原油换热器E-2110A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2110A.RINP",
+        "url2": "AWZ001/02_P21:TIT_2110A.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "温度B",
+        "num": 30,
+        "title": "FPSO-生产水与原油换热器E-2110B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P21:TIT_2110B.RINP",
+        "url2": "AWZ001/02_P21:TIT_2110B.ALMSTA",
+        "after": "°C"
+    },
+    {
+        "pre": "流量",
+        "num": 31,
+        "title": "FPSO-至火炬",
+        "type": "模拟量",
+        "url": "AWZ001/02_P50:FIT_5050A.RINP",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "液位A",
+        "num": 34,
+        "title": "FPSO-撇油器V-2610A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2610A.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力A",
+        "num": 35,
+        "title": "FPSO-撇油器V-2610A",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2610A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 36,
+        "title": "FPSO-撇油器V-2610B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2610B.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力B",
+        "num": 37,
+        "title": "FPSO-撇油器V-2610B",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2610B.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 38,
+        "title": "FPSO-撇油器V-2610C",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2610C.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力C",
+        "num": 39,
+        "title": "FPSO-撇油器V-2610C",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2610C.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位A",
+        "num": 40,
+        "title": "FPSO-浮选器V-2630A",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2630A.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力A",
+        "num": 41,
+        "title": "FPSO-浮选器V-2630A",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2630A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 42,
+        "title": "FPSO-浮选器V-2630B",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2630B.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力B",
+        "num": 43,
+        "title": "FPSO-浮选器V-2630B",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2630B.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 44,
+        "title": "FPSO-浮选器V-2630C",
+        "type": "模拟量",
+        "url": "AWZ001/02_P26:LIT_2630C.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力C",
+        "num": 45,
+        "title": "FPSO-浮选器V-2630C",
+        "type": "模拟量",
+        "url": "AWZ001/02_26:PIT_2630C.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "F",
+        "num": 51,
+        "active": "==,1,run",
+        "title": "FPSO-注水增压泵P-4410F",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "ZWZ001/P4410F:START_STATUS.VALSTS   ZWZ001/P4410F:STOP_STATUS.VALSTS",
+        "url2": "ZWZ001/P4410F:START_STATUS.ALMSTA   ZWZ001/P4410F:STOP_STATUS.ALMSTA   "
+    },
+    {
+        "pre": "液位",
+        "num": 64,
+        "title": "FPSO-注水缓冲罐V-4430",
+        "type": "模拟量",
+        "url": "AWZ001/02_P44:LIT_4430A.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力",
+        "num": 65,
+        "title": "FPSO-注水缓冲罐V-4430",
+        "type": "模拟量",
+        "url": "AWZ001/02_P44:PIT_4430A.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "流量A",
+        "num": 66,
+        "title": "FPSO-注水泵P-4420A",
+        "type": "模拟量",
+        "url": "AWZ001/02_44:FIT_4420A.PNT",
+        "url2": "AWZ001/02_44:FIT_4420A.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "流量B",
+        "num": 68,
+        "title": "FPSO-注水泵P-4420B",
+        "type": "模拟量",
+        "url": "AWZ001/02_44:FIT_4420B.PNT",
+        "url2": "AWZ001/02_44:FIT_4420B.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "流量C",
+        "num": 70,
+        "title": "FPSO-注水泵P-4420C",
+        "type": "模拟量",
+        "url": "AWZ001/02_44:FIT_4420C.PNT",
+        "url2": "AWZ001/02_44:FIT_4420C.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "流量D",
+        "num": 72,
+        "title": "FPSO-注水泵P-4420D",
+        "type": "模拟量",
+        "url": "AWZ001/02_44:FIT_4420D.PNT",
+        "url2": "AWZ001/02_44:FIT_4420D.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "流量E",
+        "num": 74,
+        "title": "FPSO-注水泵P-4420E",
+        "type": "模拟量",
+        "url": "AWZ001/02_44:FIT_4420E.PNT",
+        "url2": "AWZ001/02_44:FIT_4420E.ALMSTA",
+        "after": "m3/h"
+    },
+    {
+        "pre": "A",
+        "num": 81,
+        "active": "==,1,run",
+        "title": "FPSO-电脱供给泵 P-2170A",
+        "type": "开关量",
+        "url": "ZWZ001/P2170A:START_STATUS.VALSTS   ZWZ001/P2170A:STOP_STATUS.VALSTS",
+        "url2": "ZWZ001/P2170A:START_STATUS.ALMSTA   ZWZ001/P2170A:STOP_STATUS.ALMSTA   "
+    },
+    {
+        "pre": "温度A",
+        "num": 83,
+        "title": "WGPD至SPM注水海管TIT-4010A",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:TIT_4010B.RINP",
+        "url2": "",
+        "after": "°C"
+    },
+    {
+        "pre": "压力B",
+        "num": 85,
+        "title": "WGPD至SPM注水海管PIT_4010B",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:PIT_4010B.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "压力A",
+        "num": 88,
+        "title": "WGPA二系列至SPM生产海管PI_4010A",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:PIT_4010A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "压力A",
+        "num": 91,
+        "title": "WGPA一系列至SPM生产海管PI_4020A",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:PIT_4020A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "压力",
+        "num": 94,
+        "title": "CEPJ至WGPA生产海管PI-1491",
+        "type": "模拟量",
+        "url": "AWZ001/05_14:PIT_1491.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "压力",
+        "num": 97,
+        "title": "WGPA至CEPJ生产海管PI-1491",
+        "type": "模拟量",
+        "url": "AWZ001/05_14:PIT_1491.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "温度",
+        "num": 98,
+        "title": "WHPC至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_P40:TIT_4030B.RINP",
+        "url2": "",
+        "after": "°C"
+    },
+    {
+        "pre": "流量",
+        "num": 99,
+        "title": "WHPC至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_P40:FIT_4030B.PNT",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力",
+        "num": 100,
+        "title": "WHPC至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:PIT_4030A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "温度",
+        "num": 101,
+        "title": "WHPA至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_P40:TIT_4030B.RINP",
+        "url2": "",
+        "after": "°C"
+    },
+    {
+        "pre": "流量",
+        "num": 102,
+        "title": "WHPA至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_P40:FIT_4030B.PNT",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力",
+        "num": 103,
+        "title": "WHPA至WGPA生产海管",
+        "type": "模拟量",
+        "url": "AWZ001/05_40:PIT_4000A.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "A",
+        "num": 108,
+        "active": "==,1,run",
+        "title": "CEPJ-注水泵CEPJ-P-4102A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4102A/DC1/PV_D.CV",
+        "url2": "J-P-4102A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 110,
+        "active": "==,1,run",
+        "title": "CEPJ-注水泵CEPJ-P-4102B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4102B/DC1/PV_D.CV",
+        "url2": "J-P-4102B/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "C",
+        "num": 112,
+        "active": "==,1,run",
+        "title": "CEPJ-注水泵CEPJ-P-4102C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4102C/DC1/PV_D.CV",
+        "url2": "J-P-4102C/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "D",
+        "num": 114,
+        "active": "==,1,run",
+        "title": "CEPJ-注水泵CEPJ-P-4102D",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4102D/DC1/PV_D.CV",
+        "url2": "J-P-4102D/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "A",
+        "num": 115,
+        "active": "==,1,run",
+        "title": "CEPJ-注水增压泵CEPJ-P-4101A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4101A/DC1/PV_D.CV",
+        "url2": "J-P-4101A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 116,
+        "active": "==,1,run",
+        "title": "CEPJ-注水增压泵CEPJ-P-4101B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4101B/DC1/PV_D.CV",
+        "url2": "J-P-4101B/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "C",
+        "num": 117,
+        "active": "==,1,run",
+        "title": "CEPJ-注水增压泵CEPJ-P-4101C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4101C/DC1/PV_D.CV",
+        "url2": "J-P-4101C/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "D",
+        "num": 118,
+        "active": "==,1,run",
+        "title": "CEPJ-注水增压泵CEPJ-P-4101D",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-4101D/DC1/PV_D.CV",
+        "url2": "J-P-4101D/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "液位A",
+        "num": 119,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001A/AI1/OUT.CV",
+        "url2": "J-LI-3001A/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力A",
+        "num": 120,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003A/AI1/OUT.CV",
+        "url2": "J-PI-3003A/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 121,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001B/AI1/OUT.CV",
+        "url2": "J-LI-3001B/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力B",
+        "num": 122,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003B/AI1/OUT.CV",
+        "url2": "J-PI-3003B/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 123,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001C/AI1/OUT.CV",
+        "url2": "J-LI-3001C/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力C",
+        "num": 124,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003C/AI1/OUT.CV",
+        "url2": "J-PI-3003C/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位D",
+        "num": 125,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001D/AI1/OUT.CV",
+        "url2": "J-LI-3001D/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力D",
+        "num": 126,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003D/AI1/OUT.CV",
+        "url2": "J-PI-3003D/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位E",
+        "num": 127,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001E/AI1/OUT.CV",
+        "url2": "J-LI-3001E/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力E",
+        "num": 128,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003E/AI1/OUT.CV",
+        "url2": "J-PI-3003E/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位F",
+        "num": 129,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001F/AI1/OUT.CV",
+        "url2": "J-LI-3001F/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力F",
+        "num": 130,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003F/AI1/OUT.CV",
+        "url2": "J-PI-3003F/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位G",
+        "num": 131,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-3001G/AI1/OUT.CV",
+        "url2": "J-LI-3001G/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力G",
+        "num": 132,
+        "title": "CEPJ-斜板除油器CEPJ-V-3001G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-3003G/AI1/OUT.CV",
+        "url2": "J-PI-3003G/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位A",
+        "num": 133,
+        "title": "CEPJ-浮选器CEPJ-T-3002A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012A/AI1/OUT.CV",
+        "url2": "J-LIT-3012A/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力A",
+        "num": 134,
+        "title": "CEPJ-浮选器CEPJ-T-3002A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012A/AI1/OUT.CV",
+        "url2": "J-PIT-3012A/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 135,
+        "title": "CEPJ-浮选器CEPJ-T-3002B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012B/AI1/OUT.CV",
+        "url2": "J-LIT-3012B/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力B",
+        "num": 136,
+        "title": "CEPJ-浮选器CEPJ-T-3002B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012B/AI1/OUT.CV",
+        "url2": "J-PIT-3012B/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 137,
+        "title": "CEPJ-浮选器CEPJ-T-3002C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012C/AI1/OUT.CV",
+        "url2": "J-LIT-3012C/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力C",
+        "num": 138,
+        "title": "CEPJ-浮选器CEPJ-T-3002C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012C/AI1/OUT.CV",
+        "url2": "J-PIT-3012C/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位D",
+        "num": 139,
+        "title": "CEPJ-浮选器CEPJ-T-3002D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012D/AI1/OUT.CV",
+        "url2": "J-LIT-3012D/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力D",
+        "num": 140,
+        "title": "CEPJ-浮选器CEPJ-T-3002D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012D/AI1/OUT.CV",
+        "url2": "J-PIT-3012D/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位E",
+        "num": 141,
+        "title": "CEPJ-浮选器CEPJ-T-3002E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012E/AI1/OUT.CV",
+        "url2": "J-LIT-3012E/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力E",
+        "num": 142,
+        "title": "CEPJ-浮选器CEPJ-T-3002E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012E/AI1/OUT.CV",
+        "url2": "J-PIT-3012E/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位F",
+        "num": 143,
+        "title": "CEPJ-浮选器CEPJ-T-3002F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012F/AI1/OUT.CV",
+        "url2": "J-LIT-3012F/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力F",
+        "num": 144,
+        "title": "CEPJ-浮选器CEPJ-T-3002F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012F/AI1/OUT.CV",
+        "url2": "J-PIT-3012F/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位G",
+        "num": 145,
+        "title": "CEPJ-浮选器CEPJ-T-3002G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LIT-3012G/AI1/OUT.CV",
+        "url2": "J-LIT-3012G/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力G",
+        "num": 146,
+        "title": "CEPJ-浮选器CEPJ-T-3002G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PIT-3012G/AI1/OUT.CV",
+        "url2": "J-PIT-3012G/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位",
+        "num": 147,
+        "title": "CEPJ-注水缓冲罐CEPJ-T-4101",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-LI-4133/AI1/OUT.CV",
+        "url2": "J-LI-4133/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力",
+        "num": 148,
+        "title": "CEPJ-注水缓冲罐CEPJ-T-4101",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "J-PI-4133/AI1/OUT.CV",
+        "url2": "J-PI-4133/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "A",
+        "num": 149,
+        "active": "==,1,run",
+        "title": "CEPJ-原油外输泵CEPJ-P-2001A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-2001A/DC1/PV_D.CV",
+        "url2": "J-P-2001A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 150,
+        "active": "==,1,run",
+        "title": "CEPJ-原油外输泵CEPJ-P-2001B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-2001B/DC1/PV_D.CV",
+        "url2": "J-P-2001B/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "C",
+        "num": 151,
+        "active": "==,1,run",
+        "title": "CEPJ-原油外输泵CEPJ-P-2001C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "J-P-2001C/DC1/PV_D.CV",
+        "url2": "J-P-2001C/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "压力A",
+        "num": 153,
+        "title": "WHPA-水力旋流器HC-2610A",
+        "type": "模拟量",
+        "url": "AWZ001/07_P26:PIT_2610A.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "压力B",
+        "num": 155,
+        "title": "WHPA-水力旋流器HC-2610B",
+        "type": "模拟量",
+        "url": "AWZ001/07_P26:PIT_2610B.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位A",
+        "num": 156,
+        "title": "WHPA-聚结滤CFC-2620A",
+        "type": "模拟量",
+        "url": "AWZ001/07_CFC_COM:LI_2620A.PNT",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "液位B",
+        "num": 158,
+        "title": "WHPA-聚结滤CFC-2620B",
+        "type": "模拟量",
+        "url": "AWZ001/07_CFC_COM:LI_2620B.PNT",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "液位",
+        "num": 160,
+        "title": "WHPA-注水缓冲罐V-2010",
+        "type": "模拟量",
+        "url": "AWZ001/07_P20:LIT2010C.PNT",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力",
+        "num": 161,
+        "title": "WHPA-注水缓冲罐V-2010",
+        "type": "模拟量",
+        "url": "AWZ001/07_P20:PIT_2010A.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "num": 166,
+        "active": "==,1,run",
+        "title": "WHPD-天然气压缩机",
+        "type": "开关量",
+        "url": "未找到",
+        "url2": ""
+    },
+    {
+        "pre": "流量",
+        "num": 167,
+        "title": "WHPD-至透平",
+        "type": "模拟量",
+        "url": "AWZ001/14_P43:FIT_4315.PNT",
+        "url2": "",
+        "after": "m3/h"
+    },
+    {
+        "pre": "液位",
+        "num": 172,
+        "title": "WHPD-注水缓冲罐V-2620",
+        "type": "模拟量",
+        "url": "AWZ001/14_26_N:LIT_2620C.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力",
+        "num": 173,
+        "title": "WHPD-注水缓冲罐V-2620",
+        "type": "模拟量",
+        "url": "AWZ001/14_P26_N:PIT_2620B.PNT",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位",
+        "num": 176,
+        "title": "WHPD-浮选器V-2630",
+        "type": "模拟量",
+        "url": "AWZ001/14_26_N:PIT_2631B.RINP",
+        "url2": "",
+        "after": "mm"
+    },
+    {
+        "pre": "压力",
+        "num": 177,
+        "title": "WHPD-浮选器V-2630",
+        "type": "模拟量",
+        "url": "AWZ001/14_26_N:PIT_2633B.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "温度A",
+        "num": 179,
+        "title": "WHPF至WHPD生产海管TIT-4010A",
+        "type": "模拟量",
+        "url": "AWZ001/16_40:TIT_4010A.RINP",
+        "url2": "",
+        "after": "°C"
+    },
+    {
+        "pre": "压力A",
+        "num": 181,
+        "title": "WHPF至WHPD生产海管PIT_4000A",
+        "type": "模拟量",
+        "url": "AWZ001/16_40:PIT_4000A.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "温度A",
+        "num": 182,
+        "title": "WHPE至WHPD生产海管TIT-4010A",
+        "type": "模拟量",
+        "url": "AWZ001/18_40:TIT_4010A.RINP",
+        "url2": "",
+        "after": "°C"
+    },
+    {
+        "pre": "压力A",
+        "num": 184,
+        "title": "WHPE至WHPD生产海管PIT_4000A",
+        "type": "模拟量",
+        "url": "AWZ001/18_40:PIT_4000A.RINP",
+        "url2": "",
+        "after": "kpa"
+    },
+    {
+        "pre": "A",
+        "num": 194,
+        "active": "==,1,run",
+        "title": "CEPI-注水增压泵CEPI-P-4104A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-4104A/DC1/PV_D.CV",
+        "url2": "I-P-4102A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 195,
+        "active": "==,1,run",
+        "title": "CEPI-注水增压泵CEPI-P-4104B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-4104B/DC1/PV_D.CV",
+        "url2": "I-P-4102B/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "C",
+        "num": 196,
+        "active": "==,1,run",
+        "title": "CEPI-注水增压泵CEPI-P-4104C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-4104C/DC1/PV_D.CV",
+        "url2": "I-P-4102C/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "液位A",
+        "num": 199,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171A/AI1/OUT.CV",
+        "url2": "I-FI-4171A/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力A",
+        "num": 200,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171A/AI1/OUT.CV",
+        "url2": "I-PDI-4171A/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 201,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171B/AI1/OUT.CV",
+        "url2": "I-FI-4171B/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力B",
+        "num": 202,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171B/AI1/OUT.CV",
+        "url2": "I-PDI-4171B/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 203,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171C/AI1/OUT.CV",
+        "url2": "I-FI-4171C/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力C",
+        "num": 204,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171C/AI1/OUT.CV",
+        "url2": "I-PDI-4171C/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位D",
+        "num": 205,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171D/AI1/OUT.CV",
+        "url2": "I-FI-4171D/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力D",
+        "num": 206,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101D",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171D/AI1/OUT.CV",
+        "url2": "I-PDI-4171D/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位E",
+        "num": 207,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171E/AI1/OUT.CV",
+        "url2": "I-FI-4171E/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力E",
+        "num": 208,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101E",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171E/AI1/OUT.CV",
+        "url2": "I-PDI-4171E/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位F",
+        "num": 209,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171F/AI1/OUT.CV",
+        "url2": "I-FI-4171F/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力F",
+        "num": 210,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101F",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171F/AI1/OUT.CV",
+        "url2": "I-PDI-4171F/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位G",
+        "num": 211,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171G/AI1/OUT.CV",
+        "url2": "I-FI-4171G/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力G",
+        "num": 212,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101G",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171G/AI1/OUT.CV",
+        "url2": "I-PDI-4171G/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位H",
+        "num": 213,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101H",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171H/AI1/OUT.CV",
+        "url2": "I-FI-4171H/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力H",
+        "num": 214,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101H",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171H/AI1/OUT.CV",
+        "url2": "I-PDI-4171H/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位I",
+        "num": 215,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101I",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171I/AI1/OUT.CV",
+        "url2": "I-FI-4171I/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力I",
+        "num": 216,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101I",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171I/AI1/OUT.CV",
+        "url2": "I-PDI-4171I/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位J",
+        "num": 217,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101J",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-4171J/AI1/OUT.CV",
+        "url2": "I-FI-4171J/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力J",
+        "num": 218,
+        "title": "CEPI-核桃壳过滤器CEPI-F4101J",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDI-4171J/AI1/OUT.CV",
+        "url2": "I-PDI-4171J/AI1/BAD_ACTIVE.CV",
+        "after": "kpa"
+    },
+    {
+        "pre": "A",
+        "num": 219,
+        "active": "==,1,run",
+        "title": "CEPI-核桃壳过滤器供给泵CEPI-P-3002A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-3002A/DC1/PV_D.CV",
+        "url2": "I-P-3002A/DC1/FAIL_ACTIVE_D.CV"
+    },
+    {
+        "pre": "B",
+        "num": 220,
+        "active": "==,1,run",
+        "title": "CEPI-核桃壳过滤器供给泵CEPI-P-3002B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-3002B/DC1/PV_D.CV",
+        "url2": "I-P-3002B/DC1/FAIL_ACTIVE_D.CV"
+    },
+    {
+        "pre": "C",
+        "num": 221,
+        "active": "==,1,run",
+        "title": "CEPI-核桃壳过滤器供给泵CEPI-P-3002C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-3002C/DC1/PV_D.CV",
+        "url2": "I-P-3002C/DC1/FAIL_ACTIVE_D.CV"
+    },
+    {
+        "pre": "D",
+        "num": 222,
+        "active": "==,1,run",
+        "title": "CEPI-核桃壳过滤器供给泵CEPI-P-3002D",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-3002D/DC1/PV_D.CV",
+        "url2": "I-P-3002D/DC1/FAIL_ACTIVE_D.CV"
+    },
+    {
+        "pre": "液位",
+        "num": 223,
+        "title": "CEPI-生产水缓冲罐CEPI-T-3002",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-LIC-3041/PID1/OUT.CV",
+        "url2": "I-LIC-3041/PID1/BAD_ACTIVE.CV",
+        "after": "%"
+    },
+    {
+        "pre": "压力",
+        "num": 224,
+        "title": "CEPI-生产水缓冲罐CEPI-T-3002",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-TI-3001/AI1/OUT.CV",
+        "url2": "I-TI-3001/AI1/BAD_ACTIVE.CV",
+        "after": "°C"
+    },
+    {
+        "pre": "液位A",
+        "num": 225,
+        "title": "CEPI-浮选器CEPI-V-3001A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-LI-3021A/AI1/OUT.CV",
+        "url2": "I-LI-3021A/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力A",
+        "num": 226,
+        "title": "CEPI-浮选器CEPI-V-3001A",
+        "active2": "==,0,warn",
+        "type": "模拟量",
+        "url": "CEPI-COMP-FLOAT/LSAI/I-PIT-3008A/IO_IN",
+        "url2": "CEPI-COMP-FLOAT/LSAI/FLOATA.CV(Secure Parameter)",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位B",
+        "num": 227,
+        "title": "CEPI-浮选器CEPI-V-3001B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-LI-3021B/AI1/OUT.CV",
+        "url2": "I-LI-3021B/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力B",
+        "num": 228,
+        "title": "CEPI-浮选器CEPI-V-3001B",
+        "active2": "==,0,warn",
+        "type": "模拟量",
+        "url": "CEPI-COMP-FLOAT/LSAI/I-PIT-3008B/IO_IN",
+        "url2": "CEPI-COMP-FLOAT/LSAI/FLOATB.CV(Secure Parameter)",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位C",
+        "num": 229,
+        "title": "CEPI-浮选器CEPI-V-3001C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-LI-3021C/AI1/OUT.CV",
+        "url2": "I-LI-3021C/AI1/BAD_ACTIVE.CV",
+        "after": "mm"
+    },
+    {
+        "pre": "压力C",
+        "num": 230,
+        "title": "CEPI-浮选器CEPI-V-3001C",
+        "active2": "==,0,warn",
+        "type": "模拟量",
+        "url": "CEPI-COMP-FLOAT/LSAI/I-PIT-3008C/IO_IN",
+        "url2": "CEPI-COMP-FLOAT/LSAI/FLOATC.CV(Secure Parameter)",
+        "after": "kpa"
+    },
+    {
+        "pre": "液位A",
+        "num": 231,
+        "title": "CEPI-水力旋流器CEPI-HC-3001A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-3001A/AI1/OUT.CV",
+        "url2": "I-FI-3001A/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力A",
+        "num": 232,
+        "title": "CEPI-水力旋流器CEPI-HC-3001A",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDIC-3001A/PID1/OUT.CV",
+        "url2": "I-PDIC-3001A/PID1/BAD_ACTIVE.CV",
+        "after": "%"
+    },
+    {
+        "pre": "液位B",
+        "num": 233,
+        "title": "CEPI-水力旋流器CEPI-HC-3001B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-3001B/AI1/OUT.CV",
+        "url2": "I-FI-3001B/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力B",
+        "num": 234,
+        "title": "CEPI-水力旋流器CEPI-HC-3001B",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDIC-3001B/PID1/OUT.CV",
+        "url2": "I-PDIC-3001B/PID1/BAD_ACTIVE.CV",
+        "after": "%"
+    },
+    {
+        "pre": "液位C",
+        "num": 235,
+        "title": "CEPI-水力旋流器CEPI-HC-3001C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-FI-3001C/AI1/OUT.CV",
+        "url2": "I-FI-3001C/AI1/BAD_ACTIVE.CV",
+        "after": "m3/h"
+    },
+    {
+        "pre": "压力C",
+        "num": 236,
+        "title": "CEPI-水力旋流器CEPI-HC-3001C",
+        "active2": "==,1,warn",
+        "type": "模拟量",
+        "url": "I-PDIC-3001C/PID1/OUT.CV",
+        "url2": "I-PDIC-3001C/PID1/BAD_ACTIVE.CV",
+        "after": "%"
+    },
+    {
+        "pre": "A",
+        "num": 237,
+        "active": "==,1,run",
+        "title": "CEPI-原油外输泵CEPI-P-2001A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-2001A/DC1/PV_D.CV",
+        "url2": "I-P-2001A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 238,
+        "active": "==,1,run",
+        "title": "CEPI-原油外输泵CEPI-P-2001B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-2001B/DC1/PV_D.CV",
+        "url2": "I-P-2001B/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "C",
+        "num": 239,
+        "active": "==,1,run",
+        "title": "CEPI-原油外输泵CEPI-P-2001C",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-P-2001C/DC1/PV_D.CV",
+        "url2": "I-P-2001C/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "A",
+        "num": 240,
+        "active": "==,1,run",
+        "title": "CEPI-天然气压缩机CEPI-O-3101A",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-LCP-3101A/DC1/PV_D.CV",
+        "url2": "I-LCP-3101A/DC1/FAIL_ACTIVE.CV"
+    },
+    {
+        "pre": "B",
+        "num": 241,
+        "active": "==,1,run",
+        "title": "CEPI-天然气压缩机CEPI-O-3101B",
+        "active2": "==,1,warn",
+        "type": "开关量",
+        "url": "I-LCP-3101B/DC1/PV_D.CV",
+        "url2": "I-LCP-3101B/DC1/FAIL_ACTIVE.CV"
+    }
+]

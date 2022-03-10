@@ -33,6 +33,15 @@ const Home = {
       }
     },
     {
+      path: "/detail",
+      name: "detail",
+      component: () => import("@/views/graph/components/detail/index.vue"),
+      meta: {
+        title: "二级页面",
+        requireAuth: true,
+      }
+    },
+    {
       path: "/graphList",
       name: "graphList",
       component: () => import("@/views/graph/components/GraphList.vue"),
